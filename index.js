@@ -15,11 +15,21 @@ function FoodPlugin(game, opts) {
   this.health = game.plugins.get('voxel-health');
   if (!this.health) throw new Error('voxel-food requires voxel-health plugin');
 
+  this.items = opts.items || {
+    cookie: {itemTexture: 'i/cookie', foodAmount: 1},
+  };
+
   this.enable();
 };
 
 FoodPlugin.prototype.enable = function() {
-  this.registry.registerItem('cookie', {itemTexture: 'i/cookie', onUse: this.eat.bind(this, 1)});
+  for (var name in this.items) {
+    var props = this.items[name];
+
+    props.onUse = this.eat.bind(this, props.foodAmount);
+
+    this.registry.registerItem(name, props);
+  }
 };
 
 FoodPlugin.prototype.disable = function() {
