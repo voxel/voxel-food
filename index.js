@@ -19,16 +19,14 @@ function FoodPlugin(game, opts) {
 };
 
 FoodPlugin.prototype.enable = function() {
-  this.registry.registerItem('cookie', {itemTexture: 'i/cookie', onUse: this.eat.bind(this)});
+  this.registry.registerItem('cookie', {itemTexture: 'i/cookie', onUse: this.eat.bind(this, 1)});
 };
 
 FoodPlugin.prototype.disable = function() {
   // TODO: unregister items
 };
 
-FoodPlugin.prototype.eat = function(item) {
-  var amount = 1; // TODO: per item
-
+FoodPlugin.prototype.eat = function(amount, item) {
   var effectiveAmount = this.health.heal(amount);
 
   if (effectiveAmount === 0) {
