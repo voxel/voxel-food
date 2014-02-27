@@ -5,7 +5,7 @@ module.exports = function(game, opts) {
 };
 
 module.exports.pluginInfo = {
-  loadAfter: ['voxel-registry']
+  loadAfter: ['voxel-registry', 'voxel-health']
 };
 
 function FoodPlugin(game, opts) {
