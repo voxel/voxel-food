@@ -22,7 +22,7 @@ function FoodPlugin(game, opts) {
     beefCooked: {itemTexture: 'i/beef_cooked', foodAmount: 2.0, creativeTab: 'food', displayName: 'Cooked Beef'},
     beefRaw: {itemTexture: 'i/beef_raw', foodAmount: 0.1, creativeTab: 'food', displayName: 'Raw Beef'},
     bread: {itemTexture: 'i/bread', foodAmount: 3.0, creativeTab: 'food'},
-    cake: {itemTexture: 'i/cake', foodAMount: 3.5, creativeTab: 'food'},
+    cake: {itemTexture: 'i/cake', foodAmount: 3.5, creativeTab: 'food'},
     carrot: {itemTexture: 'i/carrot', foodAmount: 0.25, creativeTab: 'food'},
     carrotGolden: {itemTexture: 'i/carrot_golden', foodAmount: 5.0, creativeTab: 'food', displayName: 'Golden Carrot'},
     chickenCooked: {itemTexture: 'i/chicken_cooked', foodAmount: 2.0, creativeTab: 'food', displayName: 'Cooked Chicken'},
