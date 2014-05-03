@@ -2,6 +2,7 @@
   "name": "voxel-food",
   "description": "eat food to heal player (voxel.js plugin)",
   "version": "0.0.1",
+  "main": "food.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:deathcap/voxel-food.git"
